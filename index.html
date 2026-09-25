@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoidXplore — Beyond the Known</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<script src="js/script.js" defer></script>
+
+</head>
+<body data-theme="missions">
+
+<!-- Dynamic background -->
+<div class="bg-layer">
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+  <div class="nebula nebula-3"></div>
+  <div class="stars stars-1"></div>
+  <div class="stars stars-2"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- ============================================
+     FLOATING CAPSULE NAV
+     ============================================ -->
+<header class="site-header" id="header">
+  <div class="nav-capsule">
+    <a href="#" class="logo" aria-label="ORBITAL Home">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="5" fill="var(--accent)"/>
+        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.4" transform="rotate(-25 16 16)" fill="none"/>
+        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent-2)" stroke-width="1" transform="rotate(65 16 16)" fill="none" opacity="0.6"/>
+        <circle cx="28" cy="11" r="1.5" fill="var(--accent-2)"/>
+      </svg>
+      <span class="logo-text"><b>Void</b><span>Xplore</span></span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <span class="nav-indicator" id="navIndicator"></span>
+      <li><a href="#missions" class="active">Missions</a></li>
+      <li><a href="#capabilities">Tech</a></li>
+      <li><a href="#launches">Launches</a></li>
+      <li><a href="#gallery">Observatory</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <span class="nav-status">
+        <span class="dot"></span>
+        Live
+      </span>
+      <a href="#contact" class="btn btn-primary">Launch Console</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#missions">Missions</a>
+  <a href="#capabilities">Tech</a>
+  <a href="#launches">Launches</a>
+  <a href="#gallery">Observatory</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ============================================
+     HERO — Full Solar System (8 Planets)
+     ============================================ -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="hero-badge mono">
+          <span class="pulse"></span>
+          Mission Control Online
+        </span>
+        <h1>Beyond the known.<br><em>Into the infinite.</em></h1>
+        <p>VoidXplore, launches, and operates deep-space missions that push the boundaries of human exploration.</p>
+        <div class="hero-actions">
+          <a href="#missions" class="btn btn-primary">
+            Explore Missions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#gallery" class="btn btn-outline">Live Feed</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="value">247</div>
+            <div class="label">Launches</div>
+          </div>
+          <div class="hero-stat">
+            <div class="value">14.2B</div>
+            <div class="label">KM Traveled</div>
+          </div>
+          <div class="hero-stat">
+            <div class="value">96.9%</div>
+            <div class="label">Success Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL SOLAR SYSTEM -->
+      <div class="solar-system">
+        <div class="solar-system-inner">
+
+          <!-- The Sun -->
+          <div class="sun">
+            <img src="https://svs.gsfc.nasa.gov/vis/a000000/a004200/a004269/sun-x-small_print.jpg" alt="The Sun"/>
+          </div>
+
+          <!-- Orbit 1 — Mercury -->
+          <div class="orbit orbit-1">
+            <div class="planet planet-1">
+              <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar-system/mercury/images/messenger_high_resolution_view_of_mercury_pia_13840.jpg?w=4575&h=4575&fit=clip&crop=faces%2Cfocalpoint" alt="Mercury"/>
+            </div>
+          </div>
+
+          <!-- Orbit 2 — Venus -->
+          <div class="orbit orbit-2">
+            <div class="planet planet-2">
+              <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/pia00271/PIA00271~large.jpg?w=1920&h=1920&fit=clip&crop=faces%2Cfocalpoint" alt="Venus"/>
+            </div>
+          </div>
+
+          <!-- Orbit 3 — Earth -->
+          <div class="orbit orbit-3">
+            <div class="planet planet-3">
+              <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/0/885/modis_wonderglobe.jpg?w=540&h=540&fit=crop&crop=faces%2Cfocalpoint" alt="Earth"/>
+            </div>
+          </div>
+
+          <!-- Orbit 4 — Mars -->
+          <div class="orbit orbit-4">
+            <div class="planet planet-4">
+              <img src="https://images-assets.nasa.gov/image/PIA02653/PIA02653~large.jpg?w=1920&h=1920&fit=clip&crop=faces%2Cfocalpoint" alt="Mars"/>
+            </div>
+          </div>
+
+          <!-- Orbit 5 — Jupiter -->
+          <div class="orbit orbit-5">
+            <div class="planet planet-5">
+              <img src="https://images-assets.nasa.gov/image/hubble-captures-vivid-auroras-in-jupiters-atmosphere_28000029525_o/hubble-captures-vivid-auroras-in-jupiters-atmosphere_28000029525_o~large.jpg?w=1920&h=1913&fit=clip&crop=faces%2Cfocalpoint" alt="Jupiter"/>
+            </div>
+          </div>
+
+          <!-- Orbit 6 — Saturn (with rings) -->
+          <div class="orbit orbit-6">
+            <div class="planet planet-6">
+              <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia02/pia02225/jpeg/PIA02225.jpg?w=900&h=1000&fit=clip&crop=faces%2Cfocalpoint" alt="Saturn"/>
+            </div>
+          </div>
+
+          <!-- Orbit 7 — Uranus -->
+          <div class="orbit orbit-7">
+            <div class="planet planet-7">
+              <span class="ring"></span>
+              <img src="https://images-assets.nasa.gov/image/stsci-h-p1906d-f-514x514.a/stsci-h-p1906d-f-514x514.a~thumb.jpg?w=514&h=514&fit=clip&crop=faces%2Cfocalpoint" alt="Uranus"/>
+            </div>
+          </div>
+
+          <!-- Orbit 8 — Neptune -->
+          <div class="orbit orbit-8">
+            <div class="planet planet-8">
+              <img src="https://images-assets.nasa.gov/image/PIA01492/PIA01492~large.jpg?w=1920&h=1917&fit=clip&crop=faces%2Cfocalpoint" alt="Neptune"/>
+            </div>
+          </div>
+
+          <!-- HUD corner labels -->
+          <div class="hero-hud hud-tl">
+            <span class="hud-line">ORB-SYS v4.2</span>
+            <span class="hud-line">EPOCH 2026.04.12</span>
+          </div>
+          <div class="hero-hud hud-tr">
+            <span class="hud-line">AU 0.0 → 30.1</span>
+            <span class="hud-line">SIGNAL OK</span>
+          </div>
+          <div class="hero-hud hud-bl">
+            <span class="hud-line">TRACKING 8 BODIES</span>
+          </div>
+          <div class="hero-hud hud-br">
+            <span class="hud-line">ORBIT NOMINAL</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TICKER
+     ============================================ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Artemis VII — T-minus 04:12:33</span>
+    <span class="ticker-item">Lunar Gateway docking nominal</span>
+    <span class="ticker-item">Mars Relay sat online</span>
+    <span class="ticker-item">James Webb alignment 99.8%</span>
+    <span class="ticker-item">Europa Clipper signal locked</span>
+    <span class="ticker-item">ISS orbit boost complete</span>
+    <span class="ticker-item">Artemis VII — T-minus 04:12:33</span>
+    <span class="ticker-item">Lunar Gateway docking nominal</span>
+    <span class="ticker-item">Mars Relay sat online</span>
+    <span class="ticker-item">James Webb alignment 99.8%</span>
+    <span class="ticker-item">Europa Clipper signal locked</span>
+    <span class="ticker-item">ISS orbit boost complete</span>
+  </div>
+</div>
+
+<!-- ============================================
+     MISSIONS
+     ============================================ -->
+<section id="missions">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label mono">01 — Active Programs</span>
+      <h2>Missions in progress.</h2>
+      <p>From low Earth orbit to the outer solar system, our fleet operates 24/7 across multiple frontiers.</p>
+    </div>
+
+    <div class="missions-grid">
+      <article class="mission-card mission-lg reveal">
+        <div class="mission-card-img">
+          <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=1400&q=80&auto=format&fit=crop" alt="Mars surface"/>
+        </div>
+        <div class="mission-card-content">
+          <span class="mission-status active">Active</span>
+          <h3>ARES VII — Mars Sample Return</h3>
+          <p>Autonomous rover fleet collecting and caching samples from the Jezero Crater for return to Earth in 2031.</p>
+          <div class="mission-meta">
+            <div><span class="meta-label">Target</span><span class="meta-value">Mars</span></div>
+            <div><span class="meta-label">Duration</span><span class="meta-value">1,284 days</span></div>
+            <div><span class="meta-label">Distance</span><span class="meta-value">225M km</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="mission-card mission-md reveal">
+        <div class="mission-card-img">
+          <img src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=900&q=80&auto=format&fit=crop" alt="Moon surface"/>
+        </div>
+        <div class="mission-card-content">
+          <span class="mission-status upcoming">Upcoming</span>
+          <h3>LUNAR GATEWAY</h3>
+          <p>Next-gen orbital station for deep-space staging.</p>
+          <div class="mission-meta">
+            <div><span class="meta-label">Launch</span><span class="meta-value">Q3 2026</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="mission-card mission-sm reveal">
+        <div class="mission-card-img">
+          <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=900&q=80&auto=format&fit=crop" alt="Satellite in orbit"/>
+        </div>
+        <div class="mission-card-content">
+          <span class="mission-status completed">Completed</span>
+          <h3>VOYAGER-X</h3>
+          <p>Interstellar probe — now 24B km from Earth.</p>
+          <div class="mission-meta">
+            <div><span class="meta-label">Signal</span><span class="meta-value">Nominal</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="mission-card mission-sm reveal">
+        <div class="mission-card-img">
+          <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&q=80&auto=format&fit=crop" alt="Deep space"/>
+        </div>
+        <div class="mission-card-content">
+          <span class="mission-status active">Active</span>
+          <h3>EUROPA CLIPPER</h3>
+          <p>Ice-moon survey en route to Jupiter system.</p>
+          <div class="mission-meta">
+            <div><span class="meta-label">ETA</span><span class="meta-value">2030</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="mission-card mission-sm reveal">
+        <div class="mission-card-img">
+          <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=900&q=80&auto=format&fit=crop" alt="Aurora from ISS"/>
+        </div>
+        <div class="mission-card-content">
+          <span class="mission-status active">Active</span>
+          <h3>ORBITAL-1</h3>
+          <p>Commercial LEO station serving 8 nations.</p>
+          <div class="mission-meta">
+            <div><span class="meta-label">Crew</span><span class="meta-value">7 aboard</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CAPABILITIES
+     ============================================ -->
+<section id="capabilities" class="capabilities">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label mono">02 — Core Systems</span>
+      <h2>Built for the void.</h2>
+      <p>Every subsystem engineered in-house, tested to survive the harshest environments known to humanity.</p>
+    </div>
+
+    <div class="cap-grid">
+      <div class="cap-item reveal">
+        <span class="cap-index mono">SYS-01</span>
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M22 12h-6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Propulsion</h3>
+        <p>Next-gen ion drives and methalox engines delivering 3× efficiency over legacy systems.</p>
+      </div>
+
+      <div class="cap-item reveal">
+        <span class="cap-index mono">SYS-02</span>
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20M8 4v16M16 4v16"/></svg>
+        </div>
+        <h3>Avionics</h3>
+        <p>Triple-redundant flight computers with radiation-hardened processors and real-time telemetry.</p>
+      </div>
+
+      <div class="cap-item reveal">
+        <span class="cap-index mono">SYS-03</span>
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l7 7"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3>Navigation</h3>
+        <p>Deep Space Network integration with sub-meter positioning across 40 AU of operational range.</p>
+      </div>
+
+      <div class="cap-item reveal">
+        <span class="cap-index mono">SYS-04</span>
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Life Support</h3>
+        <p>Closed-loop ECLSS recycling 98% of water and oxygen for long-duration crewed missions.</p>
+      </div>
+
+      <div class="cap-item reveal">
+        <span class="cap-index mono">SYS-05</span>
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-6 4 12 2-6h8"/></svg>
+        </div>
+        <h3>Communications</h3>
+        <p>Laser-based optical comms achieving 1.2 Gbps from Mars orbit — 40× faster than radio.</p>
+      </div>
+
+      <div class="cap-item reveal">
+        <span class="cap-index mono">SYS-06</span>
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <h3>Payload</h3>
+        <p>Modular payload bays supporting 4,500 kg to LEO and 1,200 kg to trans-lunar injection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     LAUNCHES
+     ============================================ -->
+<section id="launches">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label mono">03 — Launch Manifest</span>
+      <h2>Upcoming launches.</h2>
+      <p>Real-time schedule of our next launches from pads across three continents.</p>
+    </div>
+
+    <div class="launch-table reveal">
+      <div class="launch-row head">
+        <span>Date</span>
+        <span>Mission</span>
+        <span>Vehicle</span>
+        <span>Site</span>
+        <span>Status</span>
+      </div>
+
+      <div class="launch-row">
+        <span class="date">2026-04-12</span>
+        <span class="mission-name">LUNAR GATEWAY — MODULE 1</span>
+        <span class="vehicle">Falcon Heavy</span>
+        <span class="site">KSC LC-39A</span>
+        <span class="status go">Go</span>
+      </div>
+
+      <div class="launch-row">
+        <span class="date">2026-05-03</span>
+        <span class="mission-name">STARLINK-X BATCH 47</span>
+        <span class="vehicle">Orbital-9</span>
+        <span class="site">Vandenberg SLC-4E</span>
+        <span class="status go">Go</span>
+      </div>
+
+      <div class="launch-row">
+        <span class="date">2026-06-18</span>
+        <span class="mission-name">EUROPA CLIPPER — TCM-4</span>
+        <span class="vehicle">Falcon Heavy</span>
+        <span class="site">KSC LC-39A</span>
+        <span class="status tbd">TBD</span>
+      </div>
+
+      <div class="launch-row">
+        <span class="date">2026-07-22</span>
+        <span class="mission-name">ARES VII — SAMPLE RETURN</span>
+        <span class="vehicle">Orbital-9 Heavy</span>
+        <span class="site">Starbase Pad A</span>
+        <span class="status tbd">TBD</span>
+      </div>
+
+      <div class="launch-row">
+        <span class="date">2026-09-09</span>
+        <span class="mission-name">ORBITAL-1 CREW-4</span>
+        <span class="vehicle">Crew Dragon</span>
+        <span class="site">KSC LC-39A</span>
+        <span class="status go">Go</span>
+      </div>
+
+      <div class="launch-row">
+        <span class="date">2026-11-30</span>
+        <span class="mission-name">VOYAGER-X DEEP BURN</span>
+        <span class="vehicle">Orbital-9</span>
+        <span class="site">Cape Canaveral SLC-40</span>
+        <span class="status tbd">TBD</span>
+      </div>
+
+      <div class="launch-row">
+        <span class="date">2027-02-14</span>
+        <span class="mission-name">TITAN EXPLORER</span>
+        <span class="vehicle">Falcon Heavy</span>
+        <span class="site">KSC LC-39A</span>
+        <span class="status tbd">TBD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     GALLERY
+     ============================================ -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label mono">04 — Observatory</span>
+      <h2>Captured from the void.</h2>
+      <p>Raw imagery transmitted from our fleet of telescopes, rovers, and orbital observatories.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item big reveal">
+        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1400&q=80&auto=format&fit=crop" alt="Galaxy"/>
+        <div class="caption">
+          <span class="mono">NGC-4414 · 62M LY</span>
+          <strong>Spiral Galaxy Survey</strong>
+        </div>
+      </div>
+      <div class="gallery-item tall reveal">
+        <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=900&q=80&auto=format&fit=crop" alt="Nebula"/>
+        <div class="caption">
+          <span class="mono">M-42 Orion</span>
+          <strong>Stellar Nursery</strong>
+        </div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80&auto=format&fit=crop" alt="Earth from space"/>
+        <div class="caption">
+          <span class="mono">LEO · 408 km</span>
+          <strong>Blue Marble</strong>
+        </div>
+      </div>
+      <div class="gallery-item wide reveal">
+        <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=1400&q=80&auto=format&fit=crop" alt="Aurora"/>
+        <div class="caption">
+          <span class="mono">ISS · Expedition 71</span>
+          <strong>Aurora Borealis</strong>
+        </div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=900&q=80&auto=format&fit=crop" alt="Moon"/>
+        <div class="caption">
+          <span class="mono">Lunar Surface</span>
+          <strong>Crater Detail</strong>
+        </div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=900&q=80&auto=format&fit=crop" alt="Rocket launch"/>
+        <div class="caption">
+          <span class="mono">T+00:00:42</span>
+          <strong>Ascent Phase</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA
+     ============================================ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label mono" style="justify-content: center; display: inline-flex;">05 — Join the Mission</span>
+      <h2>Ready to build the future of space?</h2>
+      <p>Whether you're an engineer, scientist, or dreamer — there's a place for you at ORBITAL.</p>
+      <div class="actions">
+        <a href="#" class="btn btn-primary">
+          View Open Roles
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#" class="btn btn-outline">Partner With Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="animation: none;">
+            <circle cx="16" cy="16" r="5" fill="var(--accent)"/>
+            <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.4" transform="rotate(-25 16 16)" fill="none"/>
+            <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent-2)" stroke-width="1" transform="rotate(65 16 16)" fill="none" opacity="0.6"/>
+            <circle cx="28" cy="11" r="1.5" fill="var(--accent-2)"/>
+          </svg>
+          <span class="logo-text"><b>Void</b><span>Xplore</span></span>
+        </a>
+        <p>Pioneering humanity's next giant leap — from low Earth orbit to the outer planets and beyond.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#missions">Active Missions</a></li>
+          <li><a href="#launches">Launch Manifest</a></li>
+          <li><a href="#capabilities">Technology</a></li>
+          <li><a href="#gallery">Observatory</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Agency</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Mission Updates</h4>
+        <p style="color: var(--text-muted); font-size: 0.88rem; font-weight: 300; margin-bottom: 0.5rem;">Subscribe to receive updates.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); this.reset();">
+          <input type="email" placeholder="your@email.com" required>
+          <button type="submit" aria-label="Subscribe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; copyright <span>VoidXplore</span> 
+            <script>document.write(new Date().getFullYear());</script> | All Rights Reserved. Designed and Developed by <a href="https://akthomee.com.ng/">Akthomee</a>
+        </p>
+      <div class="socials">
+        <a href="#" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.4 22h-7l-5.5-7.2L4.6 22H1.5l8.1-9.3L1 2h7.2l5 6.5L18.9 2zm-1.2 18h1.7L7.5 3.8H5.7L17.7 20z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+        </a>
+        <a href="#" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 24 12.5C24 5.9 18.6.5 12 .5z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>
